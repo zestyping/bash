@@ -10,7 +10,7 @@ trap 'LAST_START_TIME=${LAST_START_TIME:-$SECONDS}' DEBUG
 
 function status() {
     code=$?
-    (($LAST_RUN_TIME >= 1)) && echo "${LAST_RUN_TIME}s "
+    (($LAST_RUN_TIME >= 1)) && echo "$green${LAST_RUN_TIME}s$normal "
     [ $code != 0 ] && echo "($code) "
 }
 
